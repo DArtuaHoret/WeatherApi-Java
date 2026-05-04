@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.controllers.WykresController"
+      spacing="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <TextField fx:id="exportFilenameField" promptText="Nazwa pliku eksportu"/>
+        <Button text="Eksportuj do TXT" onAction="#Export"/>
+    </HBox>
+
+
+    <ScrollPane fitToWidth="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED"
+                VBox.vgrow="ALWAYS" style="-fx-padding: 5;">
+        <content>
+            <VBox fx:id="chartContainer" spacing="20" style="-fx-padding: 10;" />
+        </content>
+    </ScrollPane>
+</VBox>
